@@ -39,6 +39,11 @@ h1{
 
 }
 
+.mobile-image{
+		display: none;
+		
+}
+
 .box{
 	margin-left: -90px;
 	margin-top: 235px;
@@ -80,12 +85,17 @@ h1{
 }
 .question::after {
 	content: url(images/icon-arrow-down.svg);
-
+	transition: all .3s;
 }
 
 .active{
 	color: hsl(237, 12%, 33%);
 	font-weight: bold;
+}
+
+.active::after{
+	transform: rotate(180deg);
+	transition: all .3s;
 }
 
 
@@ -94,4 +104,59 @@ h1{
 	color: hsl(240, 6%, 50%);
 	font-size: 12px;
 	display: none;
+
+}
+
+
+@media only screen and (max-width: 900px){
+	.card-contain{
+		max-width: 327px;
+		flex-direction: column;
+
+	}
+
+	.card-left{
+		background-image: url(images/bg-pattern-mobile.svg);
+		background-repeat: no-repeat;
+		background-position: 45px 0px, 0px 0px;
+		max-width: 100%;
+		display: block;
+		height: 120px;
+
+	}
+
+	.mobile-image{
+		display: block;
+		max-width: 240px;
+		margin-left: auto;
+		margin-right: auto;
+		margin-top: -108px;
+
+
+	}
+
+
+	.box{
+		display: none;
+	}
+
+	.card-right{
+		padding-left: 24px;
+		padding-right: 24px;
+		padding-top: 10px;
+		padding-bottom: 50px;
+		max-width: 280px;
+	}
+	.heading{
+		margin-left: 0px;
+		margin-bottom: 0px;
+		text-align: center;
+	}
+
+	.item{
+		margin-left: auto;
+		margin-right: auto;
+		padding: 20px 0 20px 0px;
+
+	}	
 }
