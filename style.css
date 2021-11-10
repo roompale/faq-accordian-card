@@ -134,7 +134,9 @@ h1{
 
 
 	}
-
+	.question:hover {
+		color: hsl(237, 12%, 33%);
+	}
 
 	.box{
 		display: none;
